@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Private tool">
+    <meta name="Author" content="Robson Barbosa">
+
+    <title>Badeco Tool v2.0</title>
+
+    <script src="assets/JS/firebase.js"></script>
+    <script src="assets/JS/jquery-3.1.1.min.js"></script>
+    <link href="assets/CSS/bootstrap.css" rel="stylesheet">
+    <script src="assets/JS/bootstrap.min.js"></script>
+    <!-- Custom CSS -->
+    <link href="assets/CSS/sb-admin-2.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="assets/CSS/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- MetisMenu CSS -->
+    <link href="assets/CSS/metisMenu.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" type="text/css" href="assets/CSS/datatables.min.css" />-->
+    <!-- DataTables JavaScript -->
+    <script src="assets/JS/jquery.dataTables.min.js "></script>
+    <script src="assets/JS/dataTables.bootstrap.min.js "></script>
+    <!--<script src="assets/JS/dataTables.responsive.js "></script>-->
+    <script type="text/javascript" src="assets/JS/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="assets/CSS/bootstrap-datepicker3.css" />
+
+    <link href="assets/CSS/bootstrap-editable.css" rel="stylesheet" />
+    <script src="assets/JS/bootstrap-editable.min.js"></script>
+    <link href="assets/CSS/style.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="container">
+    <!-- Row -->
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        
+                        <img src="assets/img/2017-01-13-PHOTO-00000816.jpg" height="45px" width="190px" alt="WL"/>
+                        <img src="assets/img/2017-01-13-PHOTO-00000817.jpg" height="45px" width="220px" alt="KW"/>
+                        <a class="text-center" id="badecoToolAdmin" href="#">Badeco Tool Admin v2.0</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div>
+                        <form class="navbar-form navbar-right">
+                            <div class="form-group">
+
+
+                                <div class="input-group custom-search-form">
+                                    <input class="form-control" id="myInput" onkeyup=" searchJobNumber() " placeholder="Search Job Number" title="Type in the job number" type="text">
+                                    <span class="input-group-btn">
+                                                <button class="btn btn-default" id="searchBtn1" type="button">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                        </span>
+                                </div>
+                                <div class="btnsDiv">
+                                    <button type="button" id="tgBtn" class="btn btn-sm btn-success" onclick=" toggleInfo() ">Show Entry Form</button>
+                                    <button type="button" class="btn btn-sm btn-danger" id="btnSignout">Sign Out</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="col-lg-12" id="panelBody" style="display: none">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="text-center">Add New Entry</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-inline">
+                            <div class="row" id="formRow">
+                                <form id="formId">
+                                    <div class="form-group">
+                                        <input class="form-control jobNumberField" id="jobNumber" name="jobNumber" type="text" placeholder="Job Number" style="width: 135px" required>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <input class="form-control" id="community" name="community" type="text" placeholder="Community" required>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <input class="form-control lotNumberField" id="lotNumber" name="lotNumber" type="text" placeholder="Lot Number" style="width: 135px" required>
+                                    </div>
+                                    <div class="form-group" id="jobSizeInput">
+
+                                        <div class="input-group">
+                                            <input class="form-control jobSizeField" id="jobSize" name="jobSize" type="text" placeholder="Job Size" required>
+                                            <div class="input-group-addon squareFeet">
+                                                in ft&sup2;
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+
+                                        <input class="form-control " id="originalInstaller" name="originalInstaller" type="text" placeholder="Original Installer" required>
+                                    </div>
+                                    <!--<div class="form-group ">-->
+                                    <div class="input-group">
+                                        <div class="input-group-addon ">
+                                            <i class="fa fa-calendar "></i>
+                                        </div>
+                                        <input class="form-control dateField" id="date" name="date" placeholder="Date" type="text" required/>
+                                    </div>
+                                    <!--</div>-->
+
+                                    <div class="form-group">
+
+                                        <input name="_honey " style="display: none" type="text"/>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-11">
+                                            <input type="text" class="form-control" id="comment" style="width: 100.8%; margin-top: 15px" placeholder="Add extra information">
+                                        </div>
+                                        <button class="btn btn-success " style="top: -10px;" id="submitBtn" name="button" type="button" onclick=" update() ">Submit</button>
+                                        <!--<div class="col-md-2">
+                                            <button type="button" id="commentsBtn" data-html="true" data-placement="bottom" style="left: -100px" class="btn btn-sm btn-info pull-right" data-toggle="popover" title="" data-content="<textarea rows='6' cols='20' id='comment' type='text' placeholder='Comments'>">Add Comments</button>
+                                        </div>-->
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 ">
+                <div class="panel panel-default">
+                    <div class="panel-heading ">
+                        <h4 class="text-center">Completed Installations</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row ">
+                            <div class="col-lg-12">
+                                <div class="panel-body" id="dataTables-example-div">
+                                    <table class="table table-striped table-bordered table-hover" id="tableMain">
+                                        <thead>
+                                        <tr>
+                                            <td id="delHead">Del&nbsp;/&nbsp;Info</td>
+                                            <td>Job Number</td>
+                                            <td>Community</td>
+                                            <td>Lot Number</td>
+                                            <td>Job Size</td>
+                                            <td>Original Installer</td>
+                                            <td>Date</td>
+                                        </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.col-lg-6 (nested) -->
+                        </div>
+                        <!-- /.row (nested) -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+    </div>
+    <!-- container -->
+    <footer>
+        <div class="footer-copyright">
+            <div class="container-fluid text-center">      
+                <p style="color: #777777">© 2017 Copyright: Robson Barbosa </p>
+
+            </div>
+        </div>
+    </footer>
+</div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Warning</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete information? This cannot be undone.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="deleteFinal" onclick=" deleteRow(this.id) " type="button" class="btn btn-success btn-lg" data-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+    <!--<script src="assets/JS/tableEdit.js "></script>-->
+    <script src="assets/JS/firebaseInit.js "></script>
+    <script src="assets/JS/logOut.js "></script>
+    <!--<script src="assets/JS/output.js "></script>-->
+    <script src="assets/JS/bootstrap.min.js "></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="assets/JS/metisMenu.min.js "></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="assets/JS/sb-admin-2.min.js "></script>
+<script src="assets/JS/installations.js"></script>
+    <script src="assets/JS/form.js "></script>
+</body>
+</html>
