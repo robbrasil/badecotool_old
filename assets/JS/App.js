@@ -1,15 +1,15 @@
 //Get elements
-const txtEmail = document.getElementById('txtEmail');
-const txtPassword = document.getElementById('txtPassword');
-const btnLogin = document.getElementById('btnLogin');
-const btnSignUp = document.getElementById('btnSignUp');
-const btnSignout = document.getElementById('btnSignout');
+const emailTxt = document.getElementById('txtEmail');
+const passwordTxt = document.getElementById('txtPassword');
+const loginBtn = document.getElementById('btnLogin');
+const signUpBtn = document.getElementById('btnSignUp');
+//const btnSignout = document.getElementById('btnSignout');
 
 //Add login event
 btnLogin.addEventListener('click', e => {
     console.log('testing');
-    const email = txtEmail.value;
-    const pass = txtPassword.value;
+    const email = emailTxt.value;
+    const pass = passwordTxt.value;
     const auth = firebase.auth();
     //Sign in
     const promise = auth.signInWithEmailAndPassword(email, pass);
@@ -17,7 +17,7 @@ btnLogin.addEventListener('click', e => {
 });
 
 //Add sign up event
-btnSignUp.addEventListener('click', e => {
+signUpBtn.addEventListener('click', e => {
    
     
    
