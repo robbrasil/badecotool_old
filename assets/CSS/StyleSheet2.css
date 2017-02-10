@@ -43,17 +43,24 @@ input {
 }
     .form-group {
         margin-bottom: 0px !important;
-        /*width: 100%;*/
+        width: 98%;
+        margin-left: 5px;
     }
     .input-group {
         /*width: 99%;*/
 
     }
     #jobSize, #date {
-        /*margin-left: 20px;
-        margin-right: 20px;*/
+        position: relative;
+        left: 10px;
     }
     .input-group-addon {
-        /*display: none;*/
+    min-width:50px;
+    text-align:center;
+        position: relative;
+        left: 10px;
 }
+   .input-group-addon:first-child {
+     
+   }
 }
