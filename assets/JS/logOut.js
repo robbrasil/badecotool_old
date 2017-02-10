@@ -1,7 +1,7 @@
 //Get elements
-const btnSignout = document.getElementById("btnSignout");
+const signoutBtn = document.getElementById("btnSignout");
 //Add Sign Out event
-btnSignout.addEventListener("click", e=>{
+signoutBtn.addEventListener("click", e=>{
     firebase.auth().signOut();
     window.location.href = "login.html";
 });
