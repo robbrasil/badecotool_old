@@ -24,13 +24,14 @@
     <!-- DataTables JavaScript -->
     <script src="assets/JS/jquery.dataTables.min.js "></script>
     <script src="assets/JS/dataTables.bootstrap.min.js "></script>
-    <!--<script src="assets/JS/dataTables.responsive.js "></script>-->
+    <script src="assets/JS/dataTables.responsive.js "></script>
     <script type="text/javascript" src="assets/JS/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="assets/CSS/bootstrap-datepicker3.css" />
 
     <link href="assets/CSS/bootstrap-editable.css" rel="stylesheet" />
     <script src="assets/JS/bootstrap-editable.min.js"></script>
-    <link href="assets/CSS/style.css" rel="stylesheet"/>
+    <!--<link href="assets/CSS/style.css" rel="stylesheet"/>-->
+    <link href="assets/CSS/StyleSheet2.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -42,8 +43,8 @@
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
                     <div class="navbar-header">                     
-                        <img src="assets/img/2017-01-13-PHOTO-00000816.jpg" height="45px" width="190px" alt="WL"/>
-                        <img src="assets/img/2017-01-13-PHOTO-00000817.jpg" height="45px" width="220px" alt="KW"/>
+                        <img src="assets/img/2017-01-13-PHOTO-00000816.jpg" height="45px" width="190px" alt="WL" class="logo"/>
+                        <img src="assets/img/2017-01-13-PHOTO-00000817.jpg" height="45px" width="220px" alt="KW" class="logo"/>
                         <a class="text-center" id="badecoToolAdmin" href="#">Badeco Tool Admin v2.0</a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -51,18 +52,19 @@
                         <form class="navbar-form navbar-right">
                             <div class="form-group">
 
-
-                                <div class="input-group custom-search-form">
-                                    <input class="form-control" id="myInput" onkeyup=" searchJobNumber() " placeholder="Search Job Number" title="Type in the job number" type="text">
-                                    <span class="input-group-btn">
-                                                <button class="btn btn-default" id="searchBtn1" type="button">
-                                                    <i class="fa fa-search"></i>
-                                                </button>
+                                <div class="row">
+                                    <div class="input-group custom-search-form">
+                                        <input class="form-control" id="myInput" onkeyup=" searchJobNumber() " placeholder="Search Job Number" title="Type in the job number" type="text">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" id="searchBtn1" type="button">
+                                                <i class="fa fa-search"></i>
+                                            </button>
                                         </span>
-                                </div>
-                                <div class="btnsDiv">
-                                    <button type="button" id="tgBtn" class="btn btn-sm btn-success" onclick=" toggleInfo() ">Show Entry Form</button>
-                                    <button type="button" class="btn btn-sm btn-danger" id="btnSignout">Sign Out</button>
+                                    </div>
+                                    <div class="btnsDiv pull-right">
+                                        <button type="button" id="tgBtn" class="btn btn-sm btn-success" onclick=" toggleInfo() ">Show Entry Form</button>
+                                        <button type="button" class="btn btn-sm btn-danger" id="btnSignout">Sign Out</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -81,9 +83,9 @@
                     <div class="panel-body">
                         <div class="form-inline">
                             <div class="row" id="formRow">
-                                <form id="formId">
+                                <!--<form id="formId">
                                     <div class="form-group">
-                                        <input class="form-control jobNumberField" id="jobNumber" name="jobNumber" type="text" placeholder="Job Number" style="width: 135px" required>
+                                        <input class="form-control jobNumberField" id="jobNumber" name="jobNumber" type="text" placeholder="Job Number"  required>
                                     </div>
                                     <div class="form-group">
 
@@ -91,7 +93,7 @@
                                     </div>
                                     <div class="form-group">
 
-                                        <input class="form-control lotNumberField" id="lotNumber" name="lotNumber" type="text" placeholder="Lot Number" style="width: 135px" required>
+                                        <input class="form-control lotNumberField" id="lotNumber" name="lotNumber" type="text" placeholder="Lot Number" required>
                                     </div>
                                     <div class="form-group" id="jobSizeInput">
 
@@ -106,33 +108,69 @@
 
                                         <input class="form-control " id="originalInstaller" name="originalInstaller" type="text" placeholder="Original Installer" required>
                                     </div>
-                                    <!--<div class="form-group ">-->
+                                    <div class="form-group ">
                                     <div class="input-group" id="dateField">
                                         <div class="input-group-addon ">
                                             <i class="fa fa-calendar "></i>
                                         </div>
                                         <input class="form-control dateField" id="date" name="date" placeholder="Date" type="text" required/>
                                     </div>
-                                    <!--</div>-->
-
-                                    <div class="form-group">
-
-                                        <input name="_honey " style="display: none" type="text"/>
-
                                     </div>
-                                    <div class="row">
-                                        <div class="form-group col-md-11">
-                                            <input type="text" class="form-control" id="comment" style="width: 100.8%; margin-top: 15px" placeholder="Add extra information">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="comment" placeholder="Add extra information">
                                         </div>
-                                        <button class="btn btn-success " style="top: -10px;" id="submitBtn" name="button" type="button" onclick=" update() ">Submit</button>
-                                        <!--<div class="col-md-2">
+                                        <button class="btn btn-success" id="submitBtn" name="button" type="button" onclick=" update() ">Submit</button>
+                                        <div class="col-md-2">
                                             <button type="button" id="commentsBtn" data-html="true" data-placement="bottom" style="left: -100px" class="btn btn-sm btn-info pull-right" data-toggle="popover" title="" data-content="<textarea rows='6' cols='20' id='comment' type='text' placeholder='Comments'>">Add Comments</button>
-                                        </div>-->
-                                    </div>
-                                </form>
+                                        </div>
+                                   
+                                </form>-->
                             </div>
                         </div>
                         <!-- /.panel-body -->
+                        <form>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <input type="text" id="jobNumber" class="form-control" placeholder="Job Number" required/>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" id="community" class="form-control" placeholder="Community" required/>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" id="lotNumber" class="form-control" placeholder="Lot Number" required/>
+                                </div>                               
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <div class="input-group">
+                                        <input class="form-control jobSizeField" id="jobSize" name="jobSize" type="text" placeholder="Job Size" required />
+                                        <div class="input-group-addon squareFeet">
+                                            in ft&sup2;
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" id="originalInstaller" class="form-control" placeholder="Installer" required/>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="input-group" id="dateField">
+                                        <input class="form-control dateField" id="date" name="date" placeholder="Date" type="text" required />
+                                        <div class="input-group-addon ">
+                                            <i class="fa fa-calendar "></i>
+                                        </div>
+
+                                    </div>
+                                </div>          
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-11">
+                                    <input type="text" id="comment" class="form-control" placeholder="More information">
+                                </div>
+                                <div class="col-sm-1">
+                                    <button class="btn btn-success pull-right" id="submitBtn" name="button" type="button" onclick=" update() ">Submit</button>
+                                </div>
+                           </div>
+                      </form>
                     </div>
                     <!-- /.panel -->
                 </div>

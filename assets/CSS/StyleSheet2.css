@@ -1,0 +1,59 @@
+﻿body {
+     background-color: #e0e1e2 !important;
+}
+h4 {
+    color: #777777;
+}
+thead {
+    font-weight: bold;
+    color: #777777;
+}
+.btnsDiv {
+    margin: 8px;
+}
+.custom-search-form {
+    margin: 8px;
+}
+#badecoToolAdmin {
+    color: #777777;
+    font-size: 17px;
+    margin: 8px;
+    font-weight: bold;
+}
+.logo {
+    margin: 8px;
+    margin-top: 10px;
+}
+.xBtn, .iBtn {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    padding: 0 0 0 0;
+}
+input {
+    width: auto;
+}
+@media only screen and (max-width: 768px) {
+
+    input{
+        margin: 10px;
+    }
+    .input-group .form-control {
+    margin: 0px !important;
+}
+    .form-group {
+        margin-bottom: 0px !important;
+        /*width: 100%;*/
+    }
+    .input-group {
+        /*width: 99%;*/
+
+    }
+    #jobSize, #date {
+        /*margin-left: 20px;
+        margin-right: 20px;*/
+    }
+    .input-group-addon {
+        /*display: none;*/
+}
+}

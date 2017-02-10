@@ -172,11 +172,17 @@ img {
         width: 768px;
     }
 }
-
-/*@media only screen and (max-width: 768px) {
-
-    .btnsDiv {
-            position: relative;
-    right: 200px;
-    }*/
-
+@media only screen and (min-device-width: 1024px) {
+    body {
+        background-color: red;
+    }
+    #badecoToolAdmin {
+        font-size: 12px;
+    }
+}
+@media only screen 
+   and (min-width : 320px) {
+   body {
+       background-color: blue;
+   }
+}
