@@ -56,6 +56,14 @@ thead {
 img {
     margin: 5px 5px 5px 5px;
 }
+#originalInstaller {
+    left: 56px;
+    position: relative;
+}
+#dateField{
+    position: relative;
+    left: 56px;
+}
 #badecoToolAdmin {
     color: #777777;
     font-size: 17px;
@@ -99,9 +107,9 @@ img {
     height: 60px;
 }
 #submitBtn {
-        top: -8px !important;
-       
-        position: relative;
+    top: -8px !important;
+    position: relative;
+}
 @media only screen and (max-width: 768px) {
     body {
         /*background-color: red!important;*/
