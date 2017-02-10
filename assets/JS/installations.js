@@ -38,7 +38,8 @@ $(document).ready(function() {
 
 function errData(err) {
     console.log("Error!", err);
-    alert("Permission declined! Please sign in.");
+    alert("Permission denied! Please sign in.");
+    window.location.href = "login.html";
 };//Logs error
 
 function toggleInfo() {
