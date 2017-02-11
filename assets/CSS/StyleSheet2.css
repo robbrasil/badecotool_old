@@ -49,8 +49,20 @@ input {
 #dataTables-example-div {
     padding-left: 1.7em !important;
 }
+a {
+    color: #303030;
+}
+.panel-body {
+    padding: 15px 50px 15px 50px;
+}
+.commentBtn {
+    margin-left: 8px;
+}
 @media only screen and (max-width: 768px) {
-    
+    .logo {
+        height: 35%;
+        width: 35%
+    }
     input{
         margin: 10px;
     }
@@ -62,10 +74,13 @@ input {
         width: 98%;
         margin-left: 5px;
     }
-    .input-group {
-        /*width: 99%;*/
-
-    }
+    .xBtn, .iBtn {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    padding: 0 0 0 0;
+    margin: 2px 2px 2px 2px 
+}
     #jobSize, #date {
         position: relative;
         left: 10px;
@@ -79,4 +94,7 @@ input {
       table th:nth-child(2), td:nth-child(2),th:nth-child(5), td:nth-child(5) {
   display: none;
 }
+      td {
+          font-size: 12px;
+      }
 }
