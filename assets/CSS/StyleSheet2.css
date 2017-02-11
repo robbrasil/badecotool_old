@@ -49,14 +49,8 @@ input {
 #dataTables-example-div {
     padding-left: 1.7em !important;
 }
-/*table th:nth-child(4), td:nth-child(4) {
-  display: none;
-}*/
-
 @media only screen and (max-width: 768px) {
-     body {
-        background-color: red!important;
-    }
+    
     input{
         margin: 10px;
     }
@@ -87,8 +81,17 @@ input {
 and (min-device-width : 414px) 
 and (max-device-width : 736px) 
 and (orientation : portrait) {
-    
-    
-    
-     
+    /*table th:nth-child(1), td:nth-child(1),th:nth-child(4), td:nth-child(4) {
+  display: none;
+}*/
+
+     .xBtn, .iBtn {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    padding: 0 0 0 0;
+}
+     body {
+         background-color: red;
+     }
 }
