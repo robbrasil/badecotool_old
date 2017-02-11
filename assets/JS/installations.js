@@ -162,18 +162,20 @@ function gotData(data) {
         }
     });
 
-   table =  $("#tableMain").DataTable({
+  $("#tableMain").DataTable({
         "columnDefs": [
         {
             "searchable": false,
             "targets": 0,
             "orderable": false,
-            "order": [[ 6, "desc" ]],
-            //"dom": '<"top"i>rt<"bottom"flp><"clear">'
+            "order": [[ 7, "desc" ]]
 }
         ]
-
    });
+    $("#tableMain").DataTable({
+        responsive: true
+    });
+
    $("#tableMain").on( "page.dt", function () {
        console.log("page button");
        var myVar = setTimeout(makeItEdit, 500);
