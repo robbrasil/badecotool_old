@@ -1,5 +1,9 @@
-﻿body {
-     background-color: #e0e1e2 !important;
+﻿html {
+    width: 100%;
+}
+body {
+    background-color: #e0e1e2 !important;
+    overflow-x: hidden;
 }
 h4 {
     color: #777777;
@@ -10,6 +14,10 @@ thead {
 }
 .btnsDiv {
     margin: 8px;
+    margin-right: 50px !important;
+}
+.navbar-header{
+    margin-left: 20px !important;
 }
 .custom-search-form {
     margin: 8px;
@@ -47,7 +55,8 @@ input {
     margin-top: 10px;
 }
 #dataTables-example-div {
-    padding-left: 1.7em !important;
+    padding-left: 3em !important;
+    padding-right: 3em !important;
 }
 a {
     color: #303030;
@@ -58,10 +67,13 @@ a {
 .commentBtn {
     margin-left: 8px;
 }
+.col-lg-12 {
+    width: 100%;
+}
 @media only screen and (max-width: 768px) {
     .logo {
-        height: 35%;
-        width: 35%
+        height: 30%;
+        width: 30%
     }
     input{
         margin: 10px;

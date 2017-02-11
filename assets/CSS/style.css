@@ -111,20 +111,14 @@ img {
     position: relative;
 }
 @media only screen and (max-width: 768px) {
-    body {
-        /*background-color: red!important;*/
-    }
+   
     #myInput {
             width: 484px !important;
             left: -192px;
     }
     .navbar-default {
             height: 118px;
-}
-    .custom-search-form {
-    /*top: 0px;
-        width: 100px;*/
-}
+    }
     #searchBtn1 {
             left: -192px;
     }
@@ -147,8 +141,7 @@ img {
     }
     .dateField {
          width: 674px !important;
-    }
-    
+    }  
      .squareFeet {
             left: -3px;
             position: relative;
