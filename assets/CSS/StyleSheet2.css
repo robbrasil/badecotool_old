@@ -122,7 +122,7 @@ a {
          margin-right: 35px!important; 
      }
     .xBtn, .iBtn {
-    width: 25px;
+    width: 28px;
     height: 28px;
     font-size: 15px;
     padding: 0 0 0 0;
@@ -144,6 +144,16 @@ a {
       td {
           font-size: 12px;
       }
+        .popover{
+    max-width: 60%;
+}
+.popover-content {
+    margin-right: -75px;
+    padding: 8px 2px 1px 6px;
+}
+textarea {
+    width: 71%;
+}
        /*.btn-responsive {
         padding: 2px 4px;
         font-size: 90%;
@@ -155,6 +165,16 @@ a {
     body {
         background-color: blue !important;
     }
+    .popover{
+    max-width: 50%;
+}
+.popover-content {
+    margin-right: -75px;
+    padding: 8px 4px 1px 6px;
+}
+textarea {
+    width: 78%;
+}
 
     .custom-search-form {
         margin: 8px;
@@ -170,13 +190,13 @@ a {
     }
     .xBtn, .iBtn {
     width: 30px;
-    height: 28px;
-    font-size: 15px;
+    height: 32px;
+    font-size: 17px;
     padding: 0 0 0 0;
     margin:0 
 }
     input{
-        margin: 10px;
+        /*margin: 10px;*/
     } 
    
 }
