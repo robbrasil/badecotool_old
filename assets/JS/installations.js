@@ -168,14 +168,13 @@ function gotData(data) {
             "searchable": false,
             "targets": 0,
             "orderable": false,
-            "order": [[ 7, "desc" ]]
-}
-        ]
+            "order": [[ 7, "desc" ]], 
+            "width": "97px"
+}]
    });
     $("#tableMain").DataTable({
         responsive: true
     });
-
    $("#tableMain").on( "page.dt", function () {
        console.log("page button");
        var myVar = setTimeout(makeItEdit, 500);
