@@ -1,0 +1,9 @@
+﻿.navbar-nav a {
+ line-height: 50px;
+}
+#badecoToolAdmin {
+    color: #777777;
+    font-size: 22px;
+    margin: 8px;
+    font-weight: bold;
+}

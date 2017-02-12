@@ -12,6 +12,9 @@ thead {
     font-weight: bold;
     color: #777777;
 }
+.navbar-nav a {
+ line-height: 50px;
+}
 .btnsDiv {
     margin: 8px;
     margin-right: 50px !important;
@@ -20,7 +23,8 @@ thead {
     margin-left: 20px !important;
 }
 .custom-search-form {
-    margin: 8px;
+    margin: 0px 10px 5px 60px;
+    width: 300px;
 }
 #badecoToolAdmin {
     color: #777777;
@@ -175,11 +179,14 @@ textarea {
 textarea {
     width: 78%;
 }
-
+.table-responsive {
+    width: 107%;
+    overflow: hidden;
+}
     .custom-search-form {
         margin: 8px;
         margin-left: 35px;
-        width: 40%;
+        width: 50%;
         float: left;
     }
 
