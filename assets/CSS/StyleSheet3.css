@@ -55,9 +55,9 @@ img {
                /*###############   Iphone   ##############*/
 
 @media only screen and (min-width: 170px) and (max-width: 640px) {
-    body {
+    /*body {
         background-color: red !important;
-    }
+    }*/
     .navbar-header {
         margin-left: 0 !important;
     }
@@ -120,9 +120,9 @@ textarea {
                   /*###############  Ipad   ##############*/
 
 @media only screen and (min-width: 641px) and (max-width: 768px) {
-    body {
+    /*body {
         background-color: purple;
-    }
+    }*/
      .navbar-header {
         margin-left: 0 !important;
     }
