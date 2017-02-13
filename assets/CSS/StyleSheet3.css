@@ -55,9 +55,9 @@ img {
                /*###############   Iphone   ##############*/
 
 @media only screen and (min-width: 170px) and (max-width: 640px) {
-    body {
+    /*body {
         background-color: red !important;
-    }
+    }*/
     .navbar-header {
         margin-left: 0 !important;
     }
@@ -95,7 +95,7 @@ img {
     padding: 8px 2px 1px 6px;
 }
 textarea {
-    width: 69%;
+    width: 71%;
 }
     input {
          margin-top: 10px;
@@ -120,9 +120,9 @@ textarea {
                   /*###############  Ipad   ##############*/
 
 @media only screen and (min-width: 641px) and (max-width: 768px) {
-    body {
+    /*body {
         background-color: purple;
-    }
+    }*/
      .navbar-header {
         margin-left: 0 !important;
     }
@@ -152,4 +152,14 @@ textarea {
         width: 98%;
         margin-left: 5px;
     }
+             .popover{
+    max-width: 58%;
+}
+.popover-content {
+    margin-right: -132px;
+    padding: 8px 2px 1px 6px;
+}
+textarea {
+    width: 71%;
+}
 }
