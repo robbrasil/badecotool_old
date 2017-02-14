@@ -31,8 +31,9 @@
     <link href="assets/CSS/bootstrap-editable.css" rel="stylesheet" />
     <script src="assets/JS/bootstrap-editable.min.js"></script>
     <!--<link href="assets/CSS/style.css" rel="stylesheet"/>-->
-    <!--<link href="assets/CSS/StyleSheet2.css" rel="stylesheet"/>-->
-    <link href="assets/CSS/StyleSheet3.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/css/bootstrapvalidator.min.css"  rel=" stylesheet" />
+    <link href="assets/CSS/StyleSheet3.css" rel="stylesheet"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
 </head>
 
 <body>
@@ -66,33 +67,33 @@
                         </div>
                     </div>
                     <!-- /.panel-body -->
-                    <form>
+                    <form data-toggle="validator" role="form" id="mainForm">
                         <div class="form-group row">
                             <div class="col-sm-4">
-                                <input type="text" id="jobNumber" class="form-control" placeholder="Job Number" required>
+                                <input type="text" id="jobNumber" class="form-control" placeholder="Job Number" name="jobNumber" required>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" id="community" class="form-control" placeholder="Community" required>
+                                <input type="text" id="community" class="form-control" placeholder="Community" name="community" required>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" id="lotNumber" class="form-control" placeholder="Lot Number" required>
+                                <input type="text" id="lotNumber" class="form-control" placeholder="Lot Number" name="lotNumber" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <div class="input-group">
-                                    <input class="form-control jobSizeField" id="jobSize" name="jobSize" type="text" placeholder="Job Size" required>
+                                    <input class="form-control jobSizeField" id="jobSize" name="jobSize" type="text" placeholder="Job Size" name="jobSize" required>
                                     <div class="input-group-addon squareFeet">
                                         in ft&sup2;
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" id="originalInstaller" class="form-control" placeholder="Installer" required>
+                                <input type="text" id="originalInstaller" class="form-control" placeholder="Installer" name="installer" required>
                             </div>
                             <div class="col-sm-4">
                                 <div class="input-group" id="dateField">
-                                    <input class="form-control dateField" id="date" name="date" placeholder="Date" type="text" required>
+                                    <input class="form-control dateField" id="date" name="date" placeholder="Date" type="text" name="date" required>
                                     <div class="input-group-addon ">
                                         <i class="fa fa-calendar "></i>
                                     </div>
@@ -185,5 +186,6 @@
     <script src="assets/JS/sb-admin-2.min.js "></script>
     <script src="assets/JS/installations.js"></script>
     <script src="assets/JS/form.js "></script>
+    
 </body>
 </html>

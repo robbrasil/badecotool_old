@@ -10,6 +10,29 @@ var columnName;
 var table;
 
 $(document).ready(function() {
+    $('#mainForm').bootstrapValidator({
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            jobNumber: {
+                validators: {
+                    notEmpty: {
+                        message: 'The job number is required and cannot be empty'
+                    }
+                }
+            },
+            community: {
+                validators: {
+                    notEmpty: {
+                        message: 'The community name is required and cannot be empty'
+                    }
+                }
+            }
+        }
+    });
     var date_input = $("input[name='date']"); //our date input has the name "date"
     var container = $(".bootstrap-iso form").length > 0 ? $(".bootstrap-iso form").parent() : "body";
     date_input.datepicker({
@@ -49,7 +72,7 @@ function toggleInfo() {
             if (tInfo.style.display === "none") {
                 tInfo.style.display = "block";
                 $("#tgBtn").text("Hide Entry Form");
-
+                
             } else {
 
                 tInfo.style.display = "none";
