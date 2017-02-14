@@ -39,7 +39,9 @@ img {
     border-color: #e7e7e7;
 }
 .table-responsive {
-    background-color: #ffffff; overflow: hidden;
+    background-color: #ffffff;
+    overflow: hidden;
+    border-color: #ffffff
 }
 .xBtn, .iBtn {
     width: 32px;
@@ -124,6 +126,10 @@ textarea {
         width: 98%;
         margin-left: 5px;
     }
+    .table-responsive {
+    background-color: #ffffff;
+    overflow: hidden;
+    border-color: #ffffff
 
 }
                   /*###############  Ipad   ##############*/
