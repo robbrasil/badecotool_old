@@ -10,6 +10,7 @@ var columnName;
 var table;
 
 $(document).ready(function() {
+ 
     $('#mainForm').bootstrapValidator({
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -55,7 +56,7 @@ $(document).ready(function() {
 
     $('[data-toggle="popover"]').popover();
     $.fn.dataTable.ext.errMode = "none";
-   
+    
 //var myVar = setTimeout(makeItEdit, 3000);
 });
 
@@ -184,14 +185,16 @@ function gotData(data) {
             $("#"+i).popover();
         }
     });
-
+    $("#tableMain").DataTable( {
+        "order": [[ 6, "desc" ]]
+    } );
   $("#tableMain").DataTable({
         "columnDefs": [
         {
             "searchable": false,
             "targets": 0,
             "orderable": false,
-            "order": [[ 7, "desc" ]], 
+         
             "width": "97px"
 }]
    });
@@ -207,7 +210,7 @@ function gotData(data) {
     //$("#delHead").addClass("sorting_disabled");
     //table.page('first').draw(false);
     makeItEdit();
-   
+    
 };//New data from Firebase
 
 function makeItEdit() {
