@@ -10,10 +10,9 @@
 
     <title>Badeco Tool v2.0</title>
 
-    <script src="assets/JS/firebase.js"></script>
-    <script src="assets/JS/jquery-3.1.1.min.js"></script>
+    
     <link href="assets/CSS/bootstrap.css" rel="stylesheet">
-    <script src="assets/JS/bootstrap.min.js"></script>
+   
     <!-- Custom CSS -->
     <link href="assets/CSS/sb-admin-2.css" rel="stylesheet">
     <!-- Custom Fonts -->
@@ -22,29 +21,27 @@
     <link href="assets/CSS/metisMenu.min.css" rel="stylesheet">
     <!--<link rel="stylesheet" type="text/css" href="assets/CSS/datatables.min.css" />-->
     <!-- DataTables JavaScript -->
-    <script src="assets/JS/jquery.dataTables.min.js "></script>
-    <script src="assets/JS/dataTables.bootstrap.min.js "></script>
-    <script src="assets/JS/dataTables.responsive.js "></script>
-    <script type="text/javascript" src="assets/JS/bootstrap-datepicker.min.js"></script>
+  
     <link rel="stylesheet" href="assets/CSS/bootstrap-datepicker3.css" />
 
     <link href="assets/CSS/bootstrap-editable.css" rel="stylesheet" />
-    <script src="assets/JS/bootstrap-editable.min.js"></script>
+    
     <!--<link href="assets/CSS/style.css" rel="stylesheet"/>-->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/css/bootstrapvalidator.min.css"  rel=" stylesheet" />
-    <link href="assets/CSS/StyleSheet3.css" rel="stylesheet"/>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
-</head>
 
+    <link href="assets/CSS/StyleSheet3.css" rel="stylesheet"/>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/css/bootstrapvalidator.min.css" rel=" stylesheet" />
+
+
+</head>
 <body>
     <nav class="navbar navbar mainNav">
         <div class="container-fluid">
             <div class="navbar-header">
-                <img src="assets/img/2017-01-13-PHOTO-00000816.jpg" height="45px" width="190px" alt="WL" class="logo" />
+                <img src="assets/img/2017-01-13-PHOTO-00000816.jpg" height="45px" width="190px"  alt="WL" class="logo" />
                 <img src="assets/img/2017-01-13-PHOTO-00000817.jpg" height="45px" width="220px" alt="KW" class="logo" />
             </div>
             <ul class="nav navbar-nav">
-                <h4 class="text-center" id="badecoToolAdmin" href="#">Badeco Tool Admin v2.0</h4>
+                <li><h4 class="text-center" id="badecoToolAdmin">Badeco Tool Admin v2.0</h4></li>
             </ul>
             <form class="navbar-form navbar-right">
                 <div class="form-group">
@@ -70,30 +67,30 @@
                     <form data-toggle="validator" role="form" id="mainForm">
                         <div class="form-group row">
                             <div class="col-sm-4">
-                                <input type="text" id="jobNumber" class="form-control" placeholder="Job Number" name="jobNumber" required>
+                                <input type="text" id="jobNumber" class="form-control" placeholder="Job Number" name="jobNumber" data-minlength="1" required>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" id="community" class="form-control" placeholder="Community" name="community" required>
+                                <input type="text" id="community" class="form-control" placeholder="Community" name="community" data-minlength="1" required>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" id="lotNumber" class="form-control" placeholder="Lot Number" name="lotNumber" required>
+                                <input type="text" id="lotNumber" class="form-control" placeholder="Lot Number" name="lotNumber" data-minlength="1" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <div class="input-group">
-                                    <input class="form-control jobSizeField" id="jobSize" name="jobSize" type="text" placeholder="Job Size" name="jobSize" required>
+                                    <input class="form-control jobSizeField" id="jobSize" name="jobSize" type="text" placeholder="Job Size" type="number" data-minlength="1" required>
                                     <div class="input-group-addon squareFeet">
                                         in ft&sup2;
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" id="originalInstaller" class="form-control" placeholder="Installer" name="installer" required>
+                                <input type="text" id="originalInstaller" class="form-control" placeholder="Installer" name="installer" data-minlength="1" required>
                             </div>
                             <div class="col-sm-4">
                                 <div class="input-group" id="dateField">
-                                    <input class="form-control dateField" id="date" placeholder="Date" type="text" readonly name="date" required>
+                                    <input class="form-control dateField" id="date" placeholder="Date" type="text" readonly name="date" data-minlength="1" required>
                                     <div class="input-group-addon ">
                                         <i class="fa fa-calendar "></i>
                                     </div>
@@ -105,7 +102,7 @@
                                 <input type="text" id="comment" class="form-control" placeholder="More information">
                             </div>
                             <div class="col-sm-1 pull-right">
-                                <button class="btn btn-success pull-right" id="submitBtn" name="button" type="button" onclick=" update() ">Submit</button>
+                                <button class="btn btn-success pull-right" id="submitBtn" name="button" type="submit">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -174,9 +171,16 @@
         </div>
     </div>
     <!-- Modal -->
+    <script src="assets/JS/jquery-3.1.1.min.js"></script>
+    <script src="assets/JS/firebase.js"></script>
+    <script src="assets/JS/bootstrap.min.js"></script>
+     <script src="assets/JS/firebaseInit.js "></script>
+    <script src="assets/JS/jquery.dataTables.min.js "></script>
+    <script src="assets/JS/dataTables.bootstrap.min.js "></script>
+    <script src="assets/JS/dataTables.responsive.js "></script>
+    <script type="text/javascript" src="assets/JS/bootstrap-datepicker.min.js"></script>
+<script src="assets/JS/bootstrap-editable.min.js"></script>
 
-    <!--<script src="assets/JS/tableEdit.js "></script>-->
-    <script src="assets/JS/firebaseInit.js "></script>
     <script src="assets/JS/logOut.js "></script>
     <!--<script src="assets/JS/output.js "></script>-->
     <script src="assets/JS/bootstrap.min.js "></script>
@@ -185,7 +189,8 @@
     <!-- Custom Theme JavaScript -->
     <script src="assets/JS/sb-admin-2.min.js "></script>
     <script src="assets/JS/installations.js"></script>
-    <script src="assets/JS/form.js "></script>
+<script src="assets/JS/form.js "></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
     
 </body>
 </html>

@@ -11,29 +11,7 @@ var table;
 
 $(document).ready(function() {
  
-    $('#mainForm').bootstrapValidator({
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
-            jobNumber: {
-                validators: {
-                    notEmpty: {
-                        message: 'The job number is required and cannot be empty'
-                    }
-                }
-            },
-            community: {
-                validators: {
-                    notEmpty: {
-                        message: 'The community name is required and cannot be empty'
-                    }
-                }
-            }
-        }
-    });
+   
     var date_input = $("input[name='date']"); //our date input has the name "date"
     var container = $(".bootstrap-iso form").length > 0 ? $(".bootstrap-iso form").parent() : "body";
     date_input.datepicker({
@@ -185,17 +163,15 @@ function gotData(data) {
             $("#"+i).popover();
         }
     });
-    $("#tableMain").DataTable( {
-        "order": [[ 6, "desc" ]]
-    } );
-  $("#tableMain").DataTable({
+  
+    $("#tableMain").DataTable({
+        "order": [[ 6, "desc" ]],
         "columnDefs": [
         {
-            "searchable": false,
             "targets": 0,
-            "orderable": false,
-         
-            "width": "97px"
+            "searchable": false,
+            "orderable": false,  
+            "width": "87px"
 }]
    });
     $("#tableMain").DataTable({

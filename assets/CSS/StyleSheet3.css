@@ -60,7 +60,9 @@ img {
     margin-top: 5px;
   
 }
-
+img {
+    display: inline !important;
+}
 
 
                /*###############   Iphone   ##############*/
@@ -164,7 +166,7 @@ img {
    #mainForm  .input-group-addon {
     min-width:50px;
     text-align:center;
-        position: relative;    
+    position: relative;    
 } 
 
   #mainForm   .input-group .form-control {
