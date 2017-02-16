@@ -171,7 +171,7 @@ function gotData(data) {
             "targets": 0,
             "searchable": false,
             "orderable": false,  
-            "width": "87px"
+            "width": "89px"
 }]
    });
     $("#tableMain").DataTable({

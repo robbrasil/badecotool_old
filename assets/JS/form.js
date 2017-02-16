@@ -20,7 +20,6 @@ function update(){
         firebaseRef.child("rows").push(jobInfo);
         //table.ajax.reload(null, false);
         //location.reload();
-
         // var idOn = $('#tableMain > tbody tr:last > td:nth-child(1)').attr("onclick");
         // var span = $('#tableMain > tbody tr:last > td:nth-child(1)').html();
         //table.row.add([
