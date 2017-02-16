@@ -146,6 +146,12 @@ img {
         overflow: hidden;
         border-color: #ffffff;
     }
+    .xBtn, .iBtn {
+    width: 28px;
+    height: 32px;
+    font-size: 20px;
+    padding: 0 0 0 0;
+}
 }
                   /*###############  Ipad   ##############*/
 
@@ -186,5 +192,12 @@ img {
 }
 textarea {
     width: 71%;
+}
+.xBtn, .iBtn {
+    width: 30px;
+    height: 32px;
+    font-size: 20px;
+    padding: 0 0 0 0;
+    margin: 0;
 }
 }
