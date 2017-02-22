@@ -5,7 +5,9 @@ var jobSize = document.getElementById("jobSize");
 var originalInstaller = document.getElementById("originalInstaller");
 var date = document.getElementById("date");
 
-function update(){
+
+$("#mainForm").on("submit", function (e) {
+    if ($("#date").val()) {
         var comment = document.getElementById("comment");
         if ($("#comment").length) {
             console.log("Comment exists");
@@ -25,7 +27,12 @@ function update(){
         //table.row.add([
         //    span.replace("<span", "<span onclick='" + idOn) + "'", "<a href='#'>" + jobNumber.value + "</a>", "<a href='#'>" + community.value + "</a>", "<a href='#'>" + lotNumber.value + "</a>", "<a href='#'>" + jobSize.value + "</a>", "<a href='#'>" + originalInstaller.value + "</a>", "<a href='#'>" + date.value + "</a>"
         // ]).draw(false);
-        $("[data-toggle='popover']").popover("hide");
+        //$("[data-toggle='popover']").popover("hide");
         $("input").val("");
         location.reload();
-}
+    } else {
+        event.preventDefault();
+        alert("Date is required!");
+        return;
+    }
+});

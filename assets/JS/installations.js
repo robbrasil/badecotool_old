@@ -8,6 +8,14 @@ var keys = " ";
 var deleteId;
 var columnName;
 var table;
+$(document).on("focusin", "#date", function () {
+    $(this).prop("readonly", true);
+});
+
+$(document).on("focusout", "#date", function () {
+    $(this).prop("readonly", false);
+});
+
 
 $(document).ready(function() {
  
@@ -86,11 +94,11 @@ function deleteRow() {
    // console.log(temp);
     var rowId = firebase.database().ref("rows/" + deleteId);
     rowId.remove();
-    table
-       .row( $('#' + deleteId).parents('tr') )
-       .remove()
-       .draw();
-    table.page('last').draw(false);
+    //table
+    //   .row( $('#' + deleteId).parents('tr') )
+    //   .remove()
+    //   .draw();
+    //table.page('last').draw(false);
     location.reload();
     
     //$.ajax({
